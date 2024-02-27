@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 
@@ -9,4 +11,4 @@ export const NavBar = () => {
       <Link href="/contact">Contact</Link>
     </div>
   );
-}
+};
