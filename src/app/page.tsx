@@ -5,6 +5,7 @@ import { Button } from "../components/inputs/button/Button";
 import { NavBar } from "../components/navbar/navbar";
 import "../index.css";
 import { useTheme } from "next-themes";
+import { Textbox } from "@/components/inputs/textbox/textbox";
 
 const Sandbox = () => {
   const { theme, setTheme } = useTheme();
@@ -49,6 +50,7 @@ const Sandbox = () => {
           setTheme(theme === "light" ? "dark" : "light");
         }}
       />
+      <Textbox />
     </div>
   );
 };
