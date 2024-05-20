@@ -1,7 +1,6 @@
 import type {Config} from 'jest';
 import {defaults} from 'jest-config';
 
-
 const config: Config = {
   verbose: true,
   preset: 'ts-jest',
@@ -14,4 +13,5 @@ const config: Config = {
     '\\.(css|less)$': '<rootDir>/src/styleMock.ts',
   },
 };
+
 export default config;

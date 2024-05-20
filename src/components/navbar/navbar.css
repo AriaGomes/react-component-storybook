@@ -1,0 +1,34 @@
+.nav-item,
+.submenu li {
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.submenu {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  display: none;
+  padding: 10px 0; /* Add padding to submenu */
+  margin: -10px 0; /* Add negative margin to submenu */
+}
+
+.nav-item:hover .submenu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-item a,
+.submenu a {
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover,
+.submenu a:hover {
+  color: #ff6347; /* Change this to the color you want */
+}

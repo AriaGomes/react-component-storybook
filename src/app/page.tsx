@@ -13,8 +13,35 @@ const Sandbox = () => {
     console.log(theme);
   }, [theme]);
   return (
-    <>
-      <NavBar />
+    <div className="w-full">
+      <NavBar
+        navLinks={[
+          { label: "Home", href: "/" },
+          {
+            label: "About",
+            href: "/about",
+            subMenu: [
+              { label: "test", href: "/test" },
+              { label: "test", href: "/test" },
+            ],
+          },
+          {
+            label: "Contact",
+            href: "/contact",
+            subMenu: [{ label: "test", href: "/test" }],
+          },
+          {
+            label: "Services",
+            href: "/services",
+            subMenu: [
+              { label: "test", href: "/test" },
+              { label: "test", href: "/test" },
+            ],
+          },
+        ]}
+        direction="column"
+        gap={8}
+      />
       <Button
         label={"test"}
         backgroundColor="white"
@@ -22,7 +49,7 @@ const Sandbox = () => {
           setTheme(theme === "light" ? "dark" : "light");
         }}
       />
-    </>
+    </div>
   );
 };
 
